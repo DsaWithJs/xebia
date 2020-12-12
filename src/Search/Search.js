@@ -21,6 +21,7 @@ function Search(props) {
             isFirstRun.current = false;
             return;
         }
+        // As I was using Hooks, kept the ajax call here, Ideally should be in Service folder.
         async function getPlanets() {
             try {
                 const response = await fetch(swapiURL + debouncedSearchTerm)

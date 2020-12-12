@@ -21,7 +21,7 @@ function LoginForm(props) {
             if (results.length === 1) { // if length is 0 or more than 1, means username is not exact match
                 const { name, birth_year } = results[0] || {};
                 if (name === username && birth_year === password) {
-                    redirectToRegister();
+                    redirectToSearch();
                     return;
                 }
             }
@@ -48,7 +48,7 @@ function LoginForm(props) {
             getPlanets();
         }
     }
-    const redirectToRegister = () => {
+    const redirectToSearch = () => {
         props.history.push('/Search',state.username);
     }
     return (
